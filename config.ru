@@ -18,5 +18,3 @@ TweetStream::Client.new.sample do |status|
     end
   end
 end
-run lambda { |env| [200, {'Content-Type'=>'text/plain'}, StringIO.new("Hello World!\n")] }
-
