@@ -18,4 +18,3 @@ TweetStream::Client.new.sample do |status|
     end
   end
 end
-
