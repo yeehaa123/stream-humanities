@@ -8,7 +8,7 @@ TweetStream.configure do |config|
   config.auth_method        = :oauth
 end
 
-TweetStream::Client.new.sample do |status|
+TweetStream::Daemon.new(('tracker', :log_output => true).sample do |status|
   tweet = status.text.split(" ")
   triggers = %w{art job hiring new degree career teacher education dark age life code algorithm javascript ruby make future html css language data visualisation learning} 
   output = nil 
