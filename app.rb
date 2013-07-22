@@ -1,3 +1,5 @@
+#!ruby -w
+
 require 'tweetstream'
 
 TweetStream.configure do |config|
