@@ -1,1 +1,1 @@
-web: app.rb
+web: rackup app.ru
