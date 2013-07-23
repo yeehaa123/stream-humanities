@@ -15,7 +15,8 @@ TweetStream::Client.new.sample do |status|
   output = nil 
   triggers.each do |trigger| 
     if tweet.include?(trigger)
-      Pusher['concepts'].trigger('live', {message: "#{trigger}"})
+      p trigger
+      # Pusher['concepts'].trigger('live', {message: "#{trigger}"})
     end
   end
 end
