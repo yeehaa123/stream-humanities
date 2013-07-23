@@ -1,7 +1,7 @@
 require 'tweetstream'
 require 'pusher'
 
-Pusher.url = "http://9c6c1706b0e6fd4dad35:2c57a5d06889098ac963@api.pusherapp.com/apps/50054"
+Pusher.url = "http://26da32a9b80140bcf9a7:b9f8218c8d5543d6d463@api.pusherapp.com/apps/50054" 
 
 
 TweetStream.configure do |config|
