@@ -9,14 +9,13 @@ TweetStream.configure do |config|
   config.auth_method        = :oauth
 end
 
-TweetStream::Client.new.sample do |status|
+TweetStream::Client.new.track('humanities') do |status|
   tweet = status.text.split(" ")
-  triggers = %w{art job hiring new degree career teacher education dark age life code algorithm javascript ruby make future html css language data visualisation learning} 
+  triggers = %w{art job hiring degree career teacher education dark age code algorithm javascript ruby future html css language data visualisation learning} 
   output = nil 
   triggers.each do |trigger| 
     if tweet.include?(trigger)
-      p trigger
-      # Pusher['concepts'].trigger('live', {message: "#{trigger}"})
+      Pusher['concepts'].trigger('live', {message: "#{trigger}"})
     end
   end
 end
