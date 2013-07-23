@@ -1,7 +1,7 @@
 require 'tweetstream'
 require 'pusher'
 
-Pusher.url = "http://9c6c1706b0e6fd4dad35:2c57a5d06889098ac963@api.pusherapp.com/apps/50054"
+Pusher.url = "http://9c6c1706b0e6fd4dad35:2c57a5d06889098ac963@api.pusherapp.com/apps/50055"
 
 
 TweetStream.configure do |config|
@@ -14,11 +14,11 @@ end
 
 TweetStream::Client.new.sample do |status|
   tweet = status.text.split(" ")
-  triggers = %w{art job hiring new degree career teacher education dark age life code algorithm javascript ruby make future html css language data visualisation learning} 
+  triggers = %w{art job hiring degree career teacher education dark age code algorithm javascript ruby future html css language data visualisation learning} 
   output = nil 
   triggers.each do |trigger| 
     if tweet.include?(trigger)
-      Pusher['test_channel'].trigger('my_event', {message: "#{trigger}"})
+      Pusher['test_channel'].trigger('my_event', {message: "#{status.text}"})
     end
   end
 end
