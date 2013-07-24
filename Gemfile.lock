@@ -46,6 +46,7 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.7.7)
     multipart-post (1.2.0)
+    newrelic_rpm (3.6.5.130)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -94,6 +95,7 @@ DEPENDENCIES
   guard
   guard-minitest
   mocha
+  newrelic_rpm
   pusher
   sinatra
   tweetstream
