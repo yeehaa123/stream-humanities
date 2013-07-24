@@ -12,4 +12,3 @@ end
 gem 'sinatra'
 gem 'tweetstream'
 gem 'pusher'
-gem 'newrelic_rpm'
