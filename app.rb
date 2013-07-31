@@ -2,10 +2,10 @@ require 'tweetstream'
 require 'pusher'
 
 TweetStream.configure do |config|
-  config.consumer_key       = 'Kd1dpVmUQJLHYt4ovcxixg'
-  config.consumer_secret    = 'ObfiLCYWK7s6dwl4IRDeYvhlTaajHx95UglwUrVik'
-  config.oauth_token        = '1581556471-y73mJIn39e2fFrkcvRxgWkI0YdEmQ3fKaVwekV2'
-  config.oauth_token_secret = '9l4MizHlvJWJVtRIpA6wcTAFyFXB5SWCWSazwmLMpk'
+  config.consumer_key =       ENV["TWITTER_CONSUMER_KEY"]
+  config.consumer_secret =    ENV["TWITTER_CONSUMER_SECRET"]
+  config.oauth_token =        ENV["TWITTER_OAUTH_TOKEN"]
+  config.oauth_token_secret = ENV["TWITTER_OAUTH_TOKEN_SECRET"]
   config.auth_method        = :oauth
 end
 
