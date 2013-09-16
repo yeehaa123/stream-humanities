@@ -11,7 +11,7 @@ end
 
 TweetStream::Client.new.track('humanities') do |status|
   tweet = status.text.split(" ")
-  triggers = %w{art job hiring degree career teacher education dark age code algorithm javascript ruby future html css language data visualisation learning} 
+  triggers = %w{art job phd student degree bridge teacher why gap digital science code algorithm javascript digital future ruby html git language data visualisation}
   output = nil 
   triggers.each do |trigger| 
     if tweet.include?(trigger)
